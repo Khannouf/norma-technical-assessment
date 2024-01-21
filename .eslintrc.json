@@ -1,0 +1,66 @@
+{
+  "root": true,
+  "env": {
+    "browser": true,
+    "es2020": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:react-hooks/recommended",
+    "prettier"
+  ],
+  "ignorePatterns": ["dist", "vite.config.ts"],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 12,
+    "sourceType": "module",
+    "project": "./tsconfig.json"
+  },
+  "plugins": [
+    "prettier",
+    "simple-import-sort"
+  ],
+  "rules": {
+    "prettier/prettier": "error",
+    "simple-import-sort/imports": "error",
+    "simple-import-sort/exports": "error",
+    "import/no-webpack-loader-syntax": "off",
+    "no-empty": "error",
+    "no-useless-catch": "error",
+    "no-useless-constructor": "error",
+    "no-empty-pattern": "error",
+    "no-empty-character-class": "error",
+    "prefer-const": "error",
+    "no-unused-vars": "off", // Don't repeat with the typescript one
+    "no-var": "error",
+    "no-empty-function": "error",
+    "array-callback-return": "off",
+    "no-useless-rename": "error",
+    "object-shorthand": "error",
+    "prefer-object-spread": "error",
+    "prefer-destructuring": "error",
+    "arrow-spacing": "error",
+    "prefer-arrow-callback": "error",
+    "camelcase": "error",
+    "@typescript-eslint/no-empty-function": "error",
+    "@typescript-eslint/no-empty-interface": "error",
+    "@typescript-eslint/switch-exhaustiveness-check": "error",
+    "@typescript-eslint/no-use-before-define": "error",
+    "@typescript-eslint/ban-types": "error",
+    "@typescript-eslint/no-unused-vars": [
+      "error",
+      {
+        "argsIgnorePattern": "^_",
+        "varsIgnorePattern": "^_"
+      }
+    ],
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "error",
+    "prefer-template": "error",
+    "no-return-await": "error"
+  }
+}
